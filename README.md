@@ -14,6 +14,7 @@ Built in [Boostrap 3](http://getbootstrap.com/) Mutiny is can be easily customiz
 ## Features
 * Built in Boostrap 3
 * Easily customizable
+* Infinite scroll
 * Custom tags page
 * Google authorship
 * Responsive design
