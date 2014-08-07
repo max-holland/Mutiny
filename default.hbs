@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    {{! Include for changeable bootstrap theme }} 
+    {{> bootstrap-theme }}
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+       <!-- Google Authorship and Publisher Markup -->
+    {{> google-authorship}}
+
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body itemscope itemtype="http://schema.org/Blog">
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    {{! Navbar include }}    
+    {{> navbar}}
+
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Footer include }}    
+    {{> footer}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/headroom.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/imagesloaded.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fluidbox.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/infinitescroll.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/nanobar.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+
+    {{! Google analytics include }}    
+    {{> google-analytics}}
+
+</body>
+</html>

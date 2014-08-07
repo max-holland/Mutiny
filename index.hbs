@@ -1,0 +1,62 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+
+{{! The main content area on the homepage }}
+<section id="post-container" role="main">
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="container">
+            <div class="row">
+                <aside class="col-sm-2 hidden-xs">
+                    <ul>
+                        <li class="side-header">Published</li>
+                        <li class="text-muted"><time itemprop="datePublished" datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time></li>
+                        
+                        {{#foreach tags}}
+                            {{#if @first}}
+                                <li class="side-header" class="text-muted">Tags</li>        
+                            {{/if}}
+                            <li class="text-muted"><a href="{{url}}">{{name}}</a></li>
+                        {{/foreach}}
+                    </ul>
+                </aside>
+                <div class="col-sm-8">
+                    <header>
+                        <h1 itemprop="name headline"><a href="{{url}}">{{{title}}}</a></h1>
+                    </header>
+                    <section class="visible-xs-block mobile-side">
+                        <p>
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time>
+                            <span class="text-muted">
+                                {{tags separator=" / "}}
+                            </span>
+                        </p>
+                    </section>
+                    <section itemprop="articleBody text">
+                        <p>{{excerpt}}&hellip;</p>
+                    </section>
+                    <footer>
+                        <p>
+                            <a href="{{url}}">Read More</a>
+                        </p>
+                        <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="hidden">
+                            <span rel="author" itemprop="url name">Max Holland</span> 
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    {{/foreach}}
+
+    {{!! After all the posts, we have the previous/next pagination links }}
+    <div class="hidden">
+        {{pagination}}
+    </div>
+    </section>
