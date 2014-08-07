@@ -22,7 +22,7 @@ Built in [Boostrap 3](http://getbootstrap.com/) Mutiny is can be easily customiz
 * [Structured data](http://www.google.com/webmasters/tools/richsnippets?q=maxholland.me)
 
 ## Installation
-1. Download the theme by [clicking here]((https://github.com/mholland1337/Mutiny/releases/latest).
+1. Download the theme by [clicking here](https://github.com/mholland1337/Mutiny/releases/latest).
 2. Extract the .zip file.
 3. Make the appropriate changes e.g. side bar links
 4. Re-zip the file and upload to your ghost blog.
