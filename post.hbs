@@ -36,15 +36,41 @@
                     <section itemprop="articleBody text">
                     {{content}}
                     </section>
-                    <footer class="clearfix">
-                        <h5 class="pull-right">Share on : <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>, <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Facebook</a> or <a href="https://plus.google.com/share?url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">Google+</a></h5>
-                            <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="hidden">
-                                <span rel="author" itemprop="url name">Max Holland</span> 
+                    <section class="clearfix">
+                        <h5 class="pull-right">
+                        Share on : 
+                        <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>, 
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Facebook</a> or 
+                        <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">Google+</a></h5>
+                    </section>
+                    {{#author}}
+                    <footer class="clearfix" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <div class="well">
+                            <div class="media">
+                                {{#if image}}
+                                <a class="pull-left" href="{{url}}">
+                                <img class="media-object" alt="{{name}}" src="{{image}}" style="width: 64px; height: 64px;">
+                                </a>
+                                {{/if}}
+                                <div class="media-body">
+                                    <h4 class="media-heading">by <a href="{{url}}" rel="author" itemprop="url name">{{name}}</a></h4>
+                                    
+                                    {{#if bio}}
+                                        <p>{{bio}}</p>
+                                    {{else}}
+                                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                                    {{/if}}
+                                    {{#if website}}
+                                        <p><a href="{{website}}">{{website}}</a></p>
+                                    {{/if}}
+                                </div>
                             </div>
+                        </div>
                     </footer>
+                    {{/author}}
                 </div>
             </div>
         </div>
