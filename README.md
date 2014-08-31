@@ -3,7 +3,7 @@ Mutiny
 
 A free premium bootstrap Ghost theme
 
-## [View Demo Here](http://maxholland.me/) |  [Download Here](https://github.com/mholland1337/Mutiny/releases/latest)
+## [Download Here](https://github.com/mholland1337/Mutiny/releases/latest)
 
 ### Ghost v0.5 [Download Here](https://github.com/mholland1337/Mutiny/releases/latest) 
 ### Ghost v0.4.2 [Download Here](https://github.com/mholland1337/Mutiny/releases/tag/v1.0.0) 
