@@ -10,7 +10,11 @@ A free premium bootstrap Ghost theme
 
 Based on the style of the blog by [Designmodo](http://journal.designmodo.com/). Mutiny is a clean, minimal Ghost theme with all the bells and whistles.
 
+![Mutiny index](http://res.cloudinary.com/dqmsrcjxwj/image/upload/v1479550108/mutiny-index_wgdatj.png)
+
 Built in [Boostrap 3](http://getbootstrap.com/) Mutiny is can be easily customized to meet your needs. You can add your own custom bootstrap theme to overwite the default boostrap stylesheet. Mutiny currently comes with the [bootswatch](http://bootswatch.com/) theme [cosmo](http://bootswatch.com/cosmo/) as default.
+
+![Mutiny post](http://res.cloudinary.com/dqmsrcjxwj/image/upload/v1479550109/mutiny-post_jlsosm.png)
 
 ## Features
 * Built in Boostrap 3
